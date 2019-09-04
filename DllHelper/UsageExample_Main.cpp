@@ -20,8 +20,10 @@ int main()
 	} 
 	
 	if (load_success)
+	{
+		ExportDllInstance.m_pIDllEntry->OnShutdownModule();
 		ExportDllInstance.CloseDll();
-	
+	}
 	system("pause");
 
 	
